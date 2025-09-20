@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { CgProfile } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const showContact = window.location.pathname !== "/";
@@ -10,13 +11,13 @@ function Navbar() {
         <div className="nav-logo">AutoPulse</div>
         <ul className="nav-links">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/vehicles">My Vehicles</a>
+            <Link to="/vehicles">My Vehicles</Link>
           </li>
           <li>
-            <a href="/services">My Services</a>
+            <Link to="/services">My Services</Link>
           </li>
           {showContact && (
             <li>
@@ -26,17 +27,16 @@ function Navbar() {
             </li>
           )}
           <li>
-            <a href="/login">Login</a>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </div>
 
       <div className="bottom-nav">
-        <a href="/">Home</a>
-        <a href="/vehicles">Vehicles</a>
-        <a href="/services">Services</a>
-        <a href="/login" ><CgProfile size={25}/></a>  
-    
+        <Link to="/">Home</Link>
+        <Link to="/vehicles">Vehicles</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/login"><CgProfile size={25} /></Link>
       </div>
     </nav>
   );

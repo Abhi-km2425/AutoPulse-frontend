@@ -20,9 +20,8 @@ function Home() {
           Hassle-free vehicle servicing at your fingertips. Schedule, track, and
           complete your car maintenance — all in one place.
         </p>
-        <a href="/vehicles" className="btn-primary">
-          Book Service
-        </a>
+     <Link to="/vehicles" className="btn-primary">Book Service</Link>
+
       </motion.div>
 
       {/* Right Section */}
