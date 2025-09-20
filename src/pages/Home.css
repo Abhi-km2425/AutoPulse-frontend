@@ -1,0 +1,196 @@
+/* Container for the entire home section */
+.home-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 80px); /* Account for navbar height */
+  max-height: 100vh; /* Prevent overflow */
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  overflow: hidden; /* Prevent any overflow */
+  box-sizing: border-box;
+}
+
+/* Left content section */
+.home-left {
+  flex: 1 1 45%;
+  min-width: 320px;
+  max-width: 600px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Main title */
+.home-title {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff, #00d084);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle */
+.home-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(135deg, #00d084, #00b374);
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
+  align-self: flex-start;
+  text-align: center;
+  min-width: 160px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00b374, #009d63);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 208, 132, 0.4);
+  color: black;
+  text-decoration: none;
+}
+
+/* Right image section */
+.home-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+  max-width: 700px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Car image styling */
+.car-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 70vh; /* Prevent image from being too tall */
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 208, 132, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.car-image:hover {
+  transform: scale(1.02);
+}
+
+/* Add some background elements for visual interest */
+.home-right::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 208, 132, 0.1), transparent);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.home-right::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(0, 208, 132, 0.05), transparent);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home-split {
+    flex-direction: column;
+    padding: 1rem;
+    min-height: calc(100vh - 60px);
+    justify-content: center;
+  }
+  
+  .home-left {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    order: 1;
+  }
+  
+  .home-right {
+    flex: none;
+    width: 100%;
+    padding: 0.5rem;
+    order: 2;
+    max-height: 40vh;
+  }
+  
+  .home-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+  
+  .btn-primary {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+  }
+  
+  .car-image {
+    max-height: 35vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-split {
+    padding: 0.5rem;
+    min-height: calc(100vh - 120px); /* Account for mobile nav */
+  }
+  
+  .home-left {
+    padding: 0.5rem;
+  }
+  
+  .home-title {
+    font-size: 1.8rem;
+  }
+  
+  .home-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-primary {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

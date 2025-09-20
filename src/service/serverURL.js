@@ -1,0 +1,1 @@
+export const serverURL="https://autopulse-backend.onrender.com"

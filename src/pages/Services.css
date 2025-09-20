@@ -1,0 +1,39 @@
+.services {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.vehicle-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Optional: Different button colors for service actions */
+.services .btn-secondary {
+  background-color: transparent;
+  color: #4db8ff;
+  border: 1px solid #4db8ff;
+}
+
+.services .btn-secondary:hover {
+  background-color: #4db8ff;
+  color: black;
+}
+
+.services .btn-danger {
+  background-color: #ff9900;
+  color: black;
+}
+
+.services .btn-danger:hover {
+  background-color: #cc7a00;
+}

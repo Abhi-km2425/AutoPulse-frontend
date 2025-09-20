@@ -1,0 +1,49 @@
+.vehicle-card {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+  overflow-x: hidden;
+
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Base button style for all buttons */
+.btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Specific styles */
+.btn-secondary {
+  background-color: transparent;
+  color: #00d084;
+  border: 1px solid #00d084;
+}
+
+.btn-secondary:hover {
+  background-color: #00d084;
+  color: black;
+}
+
+.btn-danger {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #cc0000;
+}
