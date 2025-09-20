@@ -21,9 +21,9 @@ function Navbar() {
           </li>
           {showContact && (
             <li>
-              <a href="#contact">
+              <Link href="#contact">
                 <button className="btn-primary">Contact</button>
-              </a>
+              </Link>
             </li>
           )}
           <li>
