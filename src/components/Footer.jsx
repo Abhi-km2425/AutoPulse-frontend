@@ -15,7 +15,7 @@ const Footer = () => {
           borderTop: "1px solid #374151",
         }}
       >
-        <Container className="contact-section" id="contact">
+        <Container  id="contact">
           <Row className="g-4">
             {/* Contact Information */}
             <Col lg={4} md={6}>
@@ -198,7 +198,7 @@ const Footer = () => {
                   Book a Service
                 </Link>
                 <Link
-                  to="#"
+                  to="#contact"
                   style={{
                     color: "#D1D5DB",
                     textDecoration: "none",

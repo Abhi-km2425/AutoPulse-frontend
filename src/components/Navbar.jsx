@@ -1,10 +1,11 @@
 import React from "react";
 import "./Navbar.css";
 import { CgProfile } from "react-icons/cg";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 function Navbar() {
-  const showContact = window.location.pathname !== "/";
+  const location = useLocation();
+  const showContact = location.pathname !== "/";
   return (
     <nav className="navbar">
       <div className="nav-container d-flex justify-space-between">
@@ -21,9 +22,16 @@ function Navbar() {
           </li>
           {showContact && (
             <li>
-              <Link href="#contact">
-                <button className="btn-primary">Contact</button>
-              </Link>
+              <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btn-primary">
+                  <FaWhatsapp />
+                  WhatsApp
+                </button>
+              </a>
             </li>
           )}
           <li>
@@ -36,7 +44,9 @@ function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/vehicles">Vehicles</Link>
         <Link to="/services">Services</Link>
-        <Link to="/login"><CgProfile size={25} /></Link>
+        <Link to="/login">
+          <CgProfile size={25} />
+        </Link>
       </div>
     </nav>
   );
